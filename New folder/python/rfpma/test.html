@@ -1,0 +1,24 @@
+<!--button get activate-->
+<button onclick="callAzureFunction()">Call Python Function</button>
+<script>
+  async function callAzureFunction() {
+    const response = await fetch("", {
+      method: "GET"
+    });
+    const data = await response.text();
+    alert("Response: " + data);
+  }
+</script>
+<script>
+  async function callAzureFunction() {
+    const functionUrl = "";
+    const functionKey = ""; 
+
+    const response = await fetch(`${functionUrl}?code=${functionKey}`, {
+      method: "GET"
+    });
+
+    const data = await response.text();
+    alert("Response: " + data);
+  }
+</script>
